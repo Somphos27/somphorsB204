@@ -7,10 +7,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('',          RedirectView.as_view(url='/accounts/login/'), name='home'),  # / → login page"
-    path('admin/',    admin.site.urls),
-    path('sales/',    include('sales.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),  # login, logout, password change
+   path('admin/', admin.site.urls),
+    path('sales/', include('sales.urls')), 
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', RedirectView.as_view(url='/accounts/login/'), name='home'),
 ]
 

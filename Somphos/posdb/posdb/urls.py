@@ -11,6 +11,7 @@ urlpatterns = [
     path('admin/',    admin.site.urls),
     path('sales/',    include('sales.urls')),
     path('accounts/', include('django.contrib.auth.urls')),  # login, logout, password change
+    path('', RedirectView.as_view(url='/accounts/login/'), name='home'),
 ]
 
 # Serve media files during development

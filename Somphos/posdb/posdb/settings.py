@@ -128,7 +128,7 @@ STATIC_ROOT = '/home/Somphosphea/somphorsB204/Somphos/posdb/staticfiles'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-LOGIN_REDIRECT_URL = '/sales/products_list/'
+LOGIN_REDIRECT_URL = '/sales/products/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 CSRF_TRUSTED_ORIGINS = [

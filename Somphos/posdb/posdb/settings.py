@@ -130,7 +130,7 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
-LOGIN_REDIRECT_URL  = '/sales/products/'   # after login → product catalogue
+LOGIN_REDIRECT_URL  = '/sales/products_list/'   # after login → product catalogue
 LOGOUT_REDIRECT_URL = '/accounts/login/'   # after logout → back to login page
 
 # With these settings + the root RedirectView, the full navigation cycle is:
@@ -138,8 +138,12 @@ LOGOUT_REDIRECT_URL = '/accounts/login/'   # after logout → back to login page
 #   (log out)  →  /accounts/login/
 
 CSRF_TRUSTED_ORIGINS = [
+    STATIC_URL = '/static/'
+STATIC_ROOT = '/home/Somphosphea/somphorsB204/Somphos/posdb/staticfiles'
+
+CSRF_TRUSTED_ORIGINS = [
     'https://2026b204.pythonanywhere.com',
-    'http://2026b204.pythonanywhere.com',
+    'https://somphosphea.pythonanywhere.com'
 ]
 
 SECURE_BROWSER_XSS_FILTER = True

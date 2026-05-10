@@ -122,24 +122,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-# Media files (User uploads)
-MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
-
-LOGIN_REDIRECT_URL  = '/sales/products_list/'   # after login → product catalogue
-LOGOUT_REDIRECT_URL = '/accounts/login/'   # after logout → back to login page
-
-# With these settings + the root RedirectView, the full navigation cycle is:
-#   /  →  /accounts/login/  →  (log in)  →  /sales/products/
-#   (log out)  →  /accounts/login/
-
-CSRF_TRUSTED_ORIGINS = [
-    STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = '/home/Somphosphea/somphorsB204/Somphos/posdb/staticfiles'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+LOGIN_REDIRECT_URL = '/sales/products_list/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://2026b204.pythonanywhere.com',
